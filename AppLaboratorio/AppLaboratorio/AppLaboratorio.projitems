@@ -16,8 +16,30 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\PromedioColorConvert.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Aprendiz.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Services\CaracterizacionAprendices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\LaboratorioViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Notificable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\LaboratorioPage.xaml.cs">
+      <DependentUpon>LaboratorioPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\DetalleLaboratorio.xaml.cs">
+      <DependentUpon>DetalleLaboratorio.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)View\LaboratorioPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)View\DetalleLaboratorio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

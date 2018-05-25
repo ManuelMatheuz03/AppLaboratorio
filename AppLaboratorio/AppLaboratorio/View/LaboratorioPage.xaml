@@ -1,0 +1,46 @@
+﻿<ContentPage  
+    x:Class="AppLaboratorio.View.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppLaboratorio.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:PromedioColorConvert x:Key="promConverter"/>
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <StackLayout Margin="10">
+        <Button Text="Caracterizacion de Aprendices" BackgroundColor="Navy"
+                TextColor="White" Command="{Binding CargarAprendizCommand}"/>
+        <ActivityIndicator IsRunning="{Binding IsEnabled}"
+                           IsVisible="{Binding IsEnabled}"/>
+        <ListView ItemsSource="{Binding Aprendices}"
+                  HasUnevenRows="True"
+                  x:Name="lstName">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Nombre}"
+                                   FontSize="18"/>
+                                <Label Text="{Binding Apellido}"
+                                   FontSize="18"/>
+                            </StackLayout>
+                            <Label Text="{Binding Promedio}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+
+        </ListView>
+
+    </StackLayout>
+   </ContentPage>

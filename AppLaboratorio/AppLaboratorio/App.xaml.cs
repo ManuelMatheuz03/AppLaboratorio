@@ -11,7 +11,7 @@ namespace AppLaboratorio
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new AppLaboratorio.MainPage();
 		}
 
 		protected override void OnStart ()
